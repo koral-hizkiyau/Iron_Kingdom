@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IronKingdom</title>
+<!---favicon--->
+<link rel="icon" href="img/favicon1.png" type="image/gif">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-------fafa icon-------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-------bootstrap-------->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!------my style css------>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/footer.css">
+<link rel="stylesheet" type="text/css" href="css/nav.css">
+<!-------google font------->
+<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+<!------weather----->
+ <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+
+<!--------NAV--------->
+
+<nav id="navbar">
+<div  class="col-xs-12">
+  <a  style="padding: 0px" href="index.html" id="logo"><img src="img/logo.png"></a>
+  <div id="navbar-center">
+    <a class="active" href="index.html">Home</a>
+	<a href="includes/about.html">About</a>
+    <a href="includes/gallery.html">Gallery</a>
+    <a href="includes/studio.html">Studio</a>
+	<a href="includes/store1.html">Store</a>
+	<a href="includes/beauty.html">Spa</a>
+	<a href="includes/jobs.html">Jobs</a>
+    <a href="includes/training.html">Training</a>
+	<a href="includes/register.html">Register</a>
+	<a href="includes/contact.html">Contact</a>
+	</div>
+  </div>
+</nav>
+
+<!--mobile navbar-->
+<nav class="topnav-m" style="background-color: white; padding: 11px;">
+  <a style="padding: 0px" href="index.html" id="logo"><img id="logo-nav-mobile" src="img/logo.png" width="400px"></a>
+  <div id="myLinks">
+	<a class="active-m" href="index.html">Home</a>   
+	<a href="includes/about.html">About</a>
+    <a href="includes/gallery.html">Gallery</a>
+    <a href="includes/studio.html">Studio</a>
+	<a href="includes/store1.html">Store</a>
+	<a href="includes/beauty.html">Spa</a>
+	<a href="includes/jobs.html">Jobs</a>
+	<a href="includes/training.html">Training</a>
+	<a href="includes/register.html">Register</a>
+    <a href="includes/contact.html">Contact</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+
+
+
+
+<!--------header--------->
+
+<header  class="col-xs-12 header-mobile">
+<div class="slideshow-container">
+<div class="mySlides fade1">
+  <img src="img/header1.jpg" style="width:100%"> 
+</div>
+<div class="mySlides fade1">
+  <img src="img/header2.jpg" style="width:100%">
+</div>
+<div class="mySlides fade1">
+  <img src="img/header3.jpg" style="width:100%">
+</div>
+<div class="mySlides fade1">
+  <img src="img/header4.jpg" style="width:100%">
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!------H1- text on img------->
+
+<div class="container h1-mobile">
+<div class="text-block">
+    <h1>IRON KINGDOM GYM</h1>
+    <p style="text-align:center; font-size: 2vw;">Your power station!</p>
+	<p style="text-align:center; font-size: 2vw;">Bograshov st. 100 Tel-Aviv <b style="font-size: 30px; color: burlywood;">|</b> *1212</p>
+	</div>
+</div>
+</div>
+
+<!------dots header------->
+<div class="container text-center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+</div>
+
+</header>
+
+
+
+<!-----Registration for spinning Tournament Window---->
+<section style="display: none" id="alert-w" class="container-fluid">
+<div class="row">
+  <div class="alert-2">
+  <span id="alert-span"><a onclick="closeWindow1()" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">X</a></span>
+<p style="font-size: 25px; color: white;">Registration for spinning Tournament</p><hr style="margin-bottom: -8px;">
+<form method="post" action="php/spinning.php" style="padding: 20px">
+  <input class="alert-inp" type="text" name="first_name" placeholder="First name"><br>
+  <input class="alert-inp" type="text" name="last_name" placeholder="Last name"><br>
+  <input class="alert-inp" type="text" name="phone_number" placeholder="Phone number"><br>
+  <input class="alert-sub" type="submit" value="Submit">
+</form> 
+</div>
+</div>
+</section>
+
+<!------article-------->
+<main class="container text-center">
+<div class="row article-mobileR" style="position: relative; top: 90px">
+  <article class="col-sm">
+       <h2>7 Surprising Benefits of Exercise<hr></h2>
+       <p>You probably have a vague sense that exercise is good for you—and you’ve probably heard that it’s “healthy for the heart.” But if you’re like most people, that’s not enough motivation to get you to break a sweat with any regularity. As I report in the TIME cover story, “The Exercise Cure,” only 20%
+	   <span id="dots-1">...</span><span style="display: none" id="more-1">of Americans get the recommended 150 minutes of strength and cardiovascular physical activity per week, more than half of all baby boomers report doing no exercise whatsoever, and 80.2 million Americans over age 6 are entirely inactive.</span></p>
+       <button class="button-moreLess" onclick="readLessMore1()" id="readmore-1">Read more</button>
+	<!---<a href="http://time.com/4474874/exercise-fitness-workouts/" target="_blank">read more.. </a></p>---->
+  </article>
+  <article class="col-sm">
+       <h2>The Importance Of Physical Fitness<hr></h2>
+       <p>A person who is fit is capable of living life to its fullest extent. Physical and mental fitness play very important roles in your lives and people who are both, physically and mentally fit are less prone to medical conditions as well
+	   <span id="dots-2">...</span><span id="more-2">. Fitness does not only refer to being physically fit, but also refers to a person's mental state as well. If a person is physically fit, but mentally inwell or troubled, he or she will not to be able to function optimally. Mental fitness can only be achieved if your body is functioning well.</span></p>
+      <button class="button-moreLess" onclick="readLessMore2()" id="readmore-2">Read more</button>
+	<!----<a href="https://www.healthstatus.com/health_blog/wellness/the-importance-of-physical-fitness/"target="_blank">read more.. </a></p>---->
+  </article>
+  <article class="col-sm">
+       <h2>How Physical Fitness May Promote School Success<hr></h2>
+       <p>Children who are physically fit absorb and retain new information more effectively than children who are out of shape, a new study finds, raising timely questions about the wisdom of slashing physical education programs at schools
+	   <span id="dots-3">...</span><span id="more-3">Parents and exercise scientists (who, not infrequently, are the same people) have known for a long time that physical activity helps young people to settle and pay attention in school or at home, with salutary effects on academic performance. A representative study, presented in May at the American College of Sports Medicine, found that fourth- and fifth-grade students who ran around and otherwise exercised vigorously for at least 10 minutes before a math test scored higher than children who had sat quietly before the exam.</span></p>
+      <button class="button-moreLess" onclick="readLessMore3()" id="readmore-3">Read more</button>
+	<!----<a href="https://well.blogs.nytimes.com/2013/09/18/how-physical-fitness-may-promote-school-success/"target="_blank">read more.. </a></p>----->
+  </article>
+  </div>
+</main>
+
+<!------section beauty-------->
+<section class="container text-center">
+<div class="row section-spa" style="position: relative; top: 91px">
+<div  id="separator-div"></div>
+  <div class="col-sm col-mobileB">
+  <img src="img/beauty-index.jpg" width="90%" style="border: 2px solid white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+  </div>
+  <div id="spa-style" class="col-sm">
+ <a href="includes/beauty.html"><h2 id="h2-spa">BEAUTY Kingdom</h2></a><hr>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum varius neque bibendum iaculis. Duis ipsum lectus, egestas et tellus quis, rutrum suscipit mauris. Nunc dolor neque, finibus eget risus eu, tincidunt pellentesque mi.<br> Vivamus dolor ipsum, feugiat accumsan volutpat at, volutpat ut justo. Cras vehicula luctus est. Donec sed nisi id ligula condimentum rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+</p>
+<img id="img-mobileB" src="img/beauty-index.jpg" width="90%" style="border: 2px solid white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  </div>
+  </div>
+</section>
+
+<!------section spinning + members------->
+
+<section class="container text-center">
+<div id="break-index" class="row" style="position: relative; top: 107px">
+<div id="separator-div"></div>
+  <div class="col-sm">
+    <div style="border: 10px dotted white;background-color: pink; background-clip: content-box;">
+       <img src="img/spinning-index1.png" width="100%"> 
+	   <p style="font-size:30px; background-color: white; padding: 2px; background-color: #C0C0C0">Spinning Tournament</p>
+	   <p style="font-size: 20px">On the roof in Iron Kingdom! <mark style="background-color: yellow">August 18th at 6pm</mark><br>For signing in click 
+	   <a style="color: blue; text-decoration: underline" onclick="openWindow1()"><b>here</b></a> or call *1212<br><span style="font-size: 16px; color: red;">* Singning in for free<br>* Save the confirmation number in the end of the registration</span></p>
+	   <!-----spinning clock------>
+      <div id="timer"></div>
+	   <img src="img/spinning-index2.png" width="150"> 
+	 
+      <!--<button id="spinningB" onmouseover="mouseOver()" onmouseout="mouseOut()">Click for details</button>-->
+     </div>
+  </div>
+  
+ <div class="col-sm mobile-members">
+      <h2>Our Member's Reviews<hr></h2>
+      <p>Vivamus sed aliquet ipsum. Etiam vel hendrerit tellus, nec tincidunt nunc. Vestibulum congue eros viverra at et erat.</p>
+       <table style="width:100%; text-align:center;">
+       <tr>
+          <td><img src="img/members-index1.jpg" id="img-members"><hr id="hr-members"><h4>Koral Hana</h4><p id="p-members"><small id="date-members">15/05/2019</small><br>"Vestibulum, congue, eros at tellus ultrices viverra at et erat!"</p></td>
+          <td><img src="img/members-index2.jpg" id="img-members"><hr id="hr-members"><h4>Angelina Safin</h4><p id="p-members"><small id="date-members">25/05/2017</small><br>"Nulla eu ligula non risus lobortis sodales, Morbi velit ante!"</p> </td>
+      </tr>
+       <tr>
+          <td><img src="img/members-index3.png" id="img-members"><hr id="hr-members"><h4>Yosi levy</h4><p id="p-members"><small id="date-members">11/04/2019</small><br>"Quisque ex leo, tempus at volutpat ac, lobortis in justo"</p> </td>
+          <td><img src="img/members-index4.png" id="img-members"><hr id="hr-members"><h4>Rotem cohen</h4><p id="p-members"><small id="date-members">03/04/2018</small><br>"Arcu dui fringilla justo, quis venenatis quam lectus etiam"</p> </td>
+      </tr>
+      </table>
+    </div>
+ </div>
+</section>
+
+<!------large h2 + arrival map------>
+
+<section class="container text-center">
+<div class="row" style="position: relative; top: 109px">
+<div style="width:100%; height:15px;margin-top:10px;margin-bottom: 40px; background-color: white"></div>
+  <div class="col-sm mobile-h2B">
+       <h2 id="h2-bottom">Stop Wishing.<br><span id="span-bottom">Start Doing.</span></h2>
+	   <img src="img/index-img1.png" width="81%"> 
+ </div>
+  <div class="col-sm" style="background-color: pink; height: 542px;">
+       <h2>Arrival map<hr></h2>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.812855311889!2d34.77682288283166!3d32.0743101079745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b800d053833%3A0x562778f1fcd9276!2z15HXldeS16jXqdeV15EgMTAwLCDXqtecINeQ15HXmdeRINeZ16TXlQ!5e0!3m2!1siw!2sil!4v1562668446757!5m2!1siw!2sil" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	   <div style="display: block">
+	   <p style="display: block; padding: 10px; font-size: 20px;">Bograshov st. 100 Tel-Aviv | *1212</p>
+	   <div style="font-size: 30px; display: inline-block; margin: -29px;" class="weatherResponse" ></div>
+	   <script src="js/weather.js"></script>
+	   </div>
+   </div>
+ </div>
+</section>
+<!-----
+<div style="position: relative; z-index: 100"><span style="display:block; background-color: black; color: white; width: 650px; font-size: 30px;">X</span>
+<iframe width="650" height="400" src="includes/studio.html"></iframe>
+</div>---->
+
+
+
+
+
+
+
+
+<!------footer------->
+
+<footer id="footer-first">
+<div class="container" id="footer-t">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6" id="footer-center">
+<div><i class="fa fa-map-marker"></i> Bograshov st. 100, tel-aviv</div>
+<div><i class="fa fa-phone-square"></i> Tel: *1212</div>
+<div><i class="fa fa-fax"></i> Fax: 04-99999999</div>
+<div><i class="fa fa-envelope"></i> Email: IronKingdom@company.com</div><hr style="background-color: white">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+      <p id="rights-footer" >All rights Reserved IronKingdom.com © 2019</p>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+<img  class="con-img" id="myBtn" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="img/contact-icon.png" alt="contact" width="60" height="60">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="container">
+  <div class="modal-content mobile-modal">
+    <span class="close">&times;</span>
+
+<form action="/action_page.php" style="text-align: center; color: white;">
+<h2>Contact Us</h2>
+  First name: 
+  <input id="form-input-con" type="text" name="firstname" value="">
+  <br>
+  Last name: 
+  <input id="form-input-con" type="text" name="lastname" value="">
+  <br>
+  Telephone: 
+  <input id="form-input-con" type="tel" name="phone" required>
+  <br>
+  <textarea id="form-area"  rows="7" cols="" name="comment" placeholder="Write Something...">
+</textarea>
+  <br><br>
+  <input id="form-send" type="submit" value="SEND">
+</form> 
+  </div>
+</div>
+</footer>
+
+
+
+
+
+<!--------js bootstrap------>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!--------my script--------->
+<script src="js/nav.js"></script>
+<script src="js/index.js"></script>
+<script src="js/footer.js"></script>
+
+</body>
+</html>

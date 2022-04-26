@@ -1,0 +1,100 @@
+
+body{
+    	background-color:rgba(255, 99, 71, 0.6);
+
+}
+
+
+main{
+	position: relative; top: 131px;
+}
+
+
+
+
+
+#leg{
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+    
+
+}
+#email,#tel,#fullname,#button,#text1{
+    padding: 8px 10px;
+    background-color: #f7f7f7;
+    border:none;
+    font-size: 15px;  
+}
+
+#text1{
+	width: 70%;
+}
+
+
+#email,#tel,#fullname{
+	width: 50%;
+}
+
+
+#button{
+  margin: 4px 2px;
+  background-color: rgba(255, 99, 71, 1);
+  color:white;
+  font-size: 25px;
+  padding: 10px 5px;
+  border-radius: 12px;
+  border: 8px  color:white;
+
+}
+
+.fieldset1{
+    text-align: center;
+    border-style: dashed;
+    border-color: white;
+    border-width: 3px;
+    padding: 10px;
+    margin: auto;
+    width: 74%;
+}
+
+
+.info2{
+   font-size: 30px;
+
+}
+
+@media (max-width: 1000px) { 
+   #row-block{
+	   display: block;
+   }
+
+
+
+
+}
+
+@media (max-width: 1310px){
+	main{
+	position: relative; top: 55px;
+}
+}
+
+
+@media (max-width: 768px) { 
+  
+ 
+
+}
+
+@media (max-width: 576px) { 
+  
+  
+
+
+}
+
+@media (max-width: 375px){
+
+}

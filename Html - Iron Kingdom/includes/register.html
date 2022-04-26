@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!---favicon--->
+<link rel="icon" href="../img/favicon1.png" type="image/gif">
+
+<title>Register</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!------fafa icon----->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-----bootstrap----->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<!------my style css------>
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../css/nav.css">
+<link rel="stylesheet" type="text/css" href="../css/register.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+     
+<!--------NAV--------->
+
+<nav id="navbar">
+<div  class="col-xs-12">
+  <a style="padding: 0px" href="../index.html" id="logo"><img src="../img/logo.png"></a>
+  <div id="navbar-center">
+    <a href="../index.html">Home</a>
+	<a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="studio.html">Studio</a>
+	<a href="store1.html">Store</a>
+	<a href="beauty.html">Spa</a>
+	<a href="jobs.html">Jobs</a>
+     <a href="training.html">Training</a>
+    <a class="active"  href="register.html">Register</a>
+      	<a href="contact.html">Contact</a>
+	</div>
+  </div>
+</nav>
+
+
+<!--mobile navbar-->
+<nav class="topnav-m" style="background-color: white; padding: 11px;">
+  <a style="padding: 0px" href="../index.html" id="logo"><img id="logo-nav-mobile" src="../img/logo.png" width="400px"></a>
+  <div id="myLinks">
+	<a href="../index.html">Home</a>   
+	<a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="studio.html">Studio</a>
+	<a href="store1.html">Store</a>
+	<a href="beauty.html">Spa</a>
+	<a href="jobs.html">Jobs</a>
+	<a href="training.html">Training</a>
+	<a class="active-m" href="register.html">Register</a>
+	<a href="contact.html">Contact</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+
+
+  <!-----header + h2------>
+  <header class="title">
+	 <h2 id="h2-register" style="margin-bottom: 30px">Welcome to our online registration</h2>
+	 <p id="header-pReg">You are invited to register online for the amount of 350$ per month and become a member of Iron Kingdom registration with our services will provide you accsess to our pool, our studio classes and our main equipment floor with a variery of different exercise machines.<br>
+	* Spa services, tanning machines and spinning classes are not included.<br>
+	For members only who desire to use our tanning services and our spinning group extra charge of 20$ per month will be applied to the original price.<br>
+	<span style="font-size: 20px; color: brown;">* For daily registrations pricing for the spa services available on site.</span></p>  <hr id="hr2">
+	</header>
+
+    
+<section id="sec-regis" class="container-fluid">
+ <div id="hideText">
+Are you already member at Iron Kingdom gym?
+<button id="but" onclick="yes()">Yes</button>   
+<button id="but" onclick="No()">No</button> 
+</div>  
+    
+ <div id="hide2" class="hide22">
+   <p class="info"><b>Member details: </b></p>
+         
+ <form class="col-12" style="background-color: pink;padding: 20px;">
+    <fieldset class="style1">
+     <b>First Name</b><br> <input id="name" type="text" name="name"><br>
+     <b>Last Name</b><br> <input id="last" type="text" name="last"><br>
+     <b>ID</b><br> <input id="id" type="text" name="id" > <br>
+     <b>Subscription Number</b><br> <input id="cardnumber" type="text" name="number"><br><b>Phone Number</b><br> <input id="phone" type="tel" name="tel"><br>
+          <br> <button id="send" type="button" onclick="loadAjax()">Send</button>
+        </fieldset></form>
+       
+<p id="wrong" style="display: none">Sorry, something wrong :(<br> the details are incorrect, try again or call *1212</p>
+    </div>   <!-- close div hide2--->
+       
+ <article id="ok" style="display: none;">&#10004; The details successfully confirmed. <br><b>Price: 350$</b> per <b>Month</b>.<br>
+    <div style="font-size: 20px; text-align: left;">Add: <br>
+   <input id="machine" type="checkbox" name="machine" value="machine" style="zoom:1;"> Tanning machine for 20$ <br>
+    <input id="spinning" type="checkbox" name="spinning" value="spinning" style="zoom:1;"> Spinning group for 20$</div>
+	<br><p style="margin-top: -30px; margin-bottom: -19px;">Credit card: </p>    
+    </article>
+  <div id="hide" style="display: none; background-color: pink;padding: 20px;">  
+ <form class="form1" action="javascript:void(0);">
+ <fieldset class="style1">
+<font size="4"> <div class="style2" style="text-align: left;">
+<br><b>First Name </b><input id="firstname" name="name" required="First" type="text" placeholder=""> *<br>
+         <br><b>Last Name </b> <input id="lastname" name="name" required="Last" type="text" placeholder=""> *
+         <br><br>
+ <b>Phone Number </b><input id="tel" name="tel" pattern="[0-9]{10}" type="tel" required> *
+        <br><br>
+ <b>Email </b><input id="email" name="email" type="email" placeholder="email@email.com" required> *<p id='result'></p>          
+              <br><b>Add: </b><br>
+  <input id="1" type="radio" name="info" value="Spinning"><b>Spinning group</b><br>
+ <input id="2" type="radio" name="info" value="tanning machine"><b>tanning machine</b><br>
+      <input id="3" type="radio" name="info" value="Both"><b>Spinning & tanning machine</b></div><br><br>
+        <b>Comments: &darr;</b><br>
+<textarea id="comment" rows="5" cols="50" name="comment"></textarea>
+      <br><br>
+<input id="button2" type="reset" name="reset1" value="Reset" onclick="reserform()">
+  <button id="next" name="submit1" value="Next">Next</button><br>
+ </font> 
+     </fieldset>  
+   </form> 
+
+ </div> <!--close div hide-->
+    <br>
+       
+<p id="info" style="display: none">✔ Thank you, just one more step to completing the registration progress! <!--You're subscription with our services is now active for 350$ per month.--><br>
+Credit card details: </p><br>
+<div id="messages" class="col-xs-6" style="display:none;background-color: pink;padding: 20px;">
+<form id="form" >
+  <fieldset class="style1">
+    <b>Card Holder Name</b><br> 
+ <input type="text" id="namecard"><span id="checkName" style='font-size:20px;'></span><br><br>
+   <b>Card Number</b><br> 
+ <input type="text" id="cardNum"><span id="check" style='font-size:20px;'></span><br><br>
+    <label> <b>Expiry MM/YY: </b></label><br>
+  <select id="expiryMonth">
+		  <option selected> Month </option>
+			<option>01</option>
+			<option>02</option>
+			<option>03</option>
+			<option>04</option>
+			<option>05</option>
+			<option>06</option>
+			<option>07</option>
+			<option>08</option>
+			<option>09</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+	</select>
+  <select id="expiryYear">
+		  <option selected>Year</option>
+			<option>2019</option>
+			<option>2020</option>
+			<option>2021</option>
+			<option>2022</option>
+			<option>2023</option>
+			<option>2024</option>
+			<option>2025</option>
+			<option>2026</option>
+			<option>2027</option>
+			<option>2028</option>
+			<option>2029</option>
+			<option>2030</option>
+	</select> <span id="expiry" style='font-size:20px;'></span><br><br>
+      <b>CVV</b><br> <input type="text" id="cvv"> <span id="check2" style='font-size:20px;'></span>
+    </fieldset>
+</form><br><br>
+  <button id="back" name="Back" style="display: none">Back</button> <button id="sum" name="submit" onclick="validate_name(ValidateCreditCardNumber(validMonthYear(validate_cvv(checkBox()))))">Check</button>
+</div>    
+  <div id="agree" style="display: none"></div>
+       
+ </section> 
+	   
+	   
+<!------footer----->
+<footer id="footer-first" style="position: relative; top: 159px;">
+<div class="container" id="footer-t">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6" id="footer-center">
+<div><i class="fa fa-map-marker"></i> Bograshov st. 100, tel-aviv</div>
+<div><i class="fa fa-phone-square"></i> Tel: *1212</div>
+<div><i class="fa fa-fax"></i> Fax: 04-99999999</div>
+<div><i class="fa fa-envelope"></i> Email: IronKingdom@company.com</div><hr style="background-color: white">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+      <p id="rights-footer" >All rights Reserved IronKingdom.com © 2019</p>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+<img  class="con-img" id="myBtn" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="../img/contact-icon.png" alt="contact" width="60" height="60">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="container">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+<form action="/action_page.php" style="text-align: center; color: white;">
+<h2>Contact Us</h2>
+  First name: 
+  <input id="form-input-con" type="text" name="firstname" value="">
+  <br>
+  Last name: 
+  <input id="form-input-con" type="text" name="lastname" value="">
+  <br>
+  Telephone: 
+  <input id="form-input-con" type="tel" name="phone" required>
+  <br>
+  <textarea id="form-area"  rows="7" cols="" name="comment" placeholder="Write Something...">
+</textarea>
+  <br><br>
+  <input id="form-send" type="submit" value="SEND">
+</form> 
+  </div>
+</div>
+</footer>
+
+
+ <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+ 
+ <!----my js---->
+    <script src="../js/validCard.js"></script>
+    <script src="../js/formcheck.js"></script>
+    <script src="../js/ajax.js"></script>
+	<script src="../js/footer.js"></script>
+	<script src="../js/nav.js"></script>
+	
+</body>
+</html>
