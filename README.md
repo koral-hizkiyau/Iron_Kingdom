@@ -1,8 +1,7 @@
 # Iron_Kingdom
 ### HTML CSS JAVASCRIPT
 
-Website of a bar and restaurant with information about the bar, menu, reservation, etc... 
-
+The gym website is where you can find information about the gym, photos, spa details, and more...
 
 [Website Link](https://ironkingdomgym.netlify.app/) 
 
